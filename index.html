@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ponderings</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <button id="theme-toggle">Dark mode</button>
@@ -31,9 +31,9 @@
     <h2>Index</h2>
     <ul>
       <li>
-        <a href="/life/intro.html">On Life</a>
+        <a href="life/intro.html">On Life</a>
         <ul>
-          <li><a href="/life/human.html">Humans</a></li>
+          <li><a href="life/human.html">Humans</a></li>
           <li>Purpose</li>
           <li>Meaning</li>
         </ul>
@@ -46,28 +46,26 @@
           <li>Experiences</li>
         </ul>
         <li>On Experiences
-            <ul>
-                <li>
-                    Travel
-                </li>
-            </ul>
+          <ul>
+            <li>
+              Travel
+            </li>
+          </ul>
         </li>
       </li>
     </ul>
     <script>
-      const toggle = document.getElementById("theme-toggle");
-
-      if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark-mode");
-      }
-
-      toggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-        localStorage.setItem(
-          "theme",
-          document.body.classList.contains("dark-mode") ? "dark" : "light"
-        );
-      });
+    const toggle = document.getElementById("theme-toggle");
+    if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    }
+    toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem(
+    "theme",
+    document.body.classList.contains("dark-mode") ? "dark" : "light"
+    );
+    });
     </script>
   </body>
 </html>

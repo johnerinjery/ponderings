@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Human</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <button id="theme-toggle">Dark mode</button>
+    <h1 style="text-align: center">Human</h1>
+    <p>
+      Hello, Reader. In this page I want to share my <em>Ponderings</em> on
+      Human. Imporant it is to note that I revise these texts if I learn
+      something that changes my prespective drastically. One has to be ready for
+      change at all times after all. However, everything you read here are my
+      thoughts which I have tried to be very critical about.
+    </p>
+    <hr />
+    <p>
+      Standing on a busy roadside, looking at a Woodpecker perched on a close by
+      power line, I found myself thinking about Life.
+    </p>
+    <p>
+      Oftentimes I have found, when we think deeply about something
+      philosophical, we tend to get stuck by the word we use to describe what we
+      are thinking about. By this I mean, say we are thinking about happiness.
+      What is happiness? When is someone really happy? How do we find happiness?
+      When we think about all this, we oftentimes subconsciously come back to
+      the textbook definition of the word happiness. If the quest was to find
+      out the meaning of the word happiness, it would not be a quest at all –
+      the word is very well defined in a standard lexicon. If this definition
+      was whole and satisfactory, then the question ‘What is Happiness?’ would
+      not have any merit. But none of us thinks that is the case, do we? We can
+      hence conclude that all of us Humans have a subconscious understanding
+      that a definition in words is not sufficient to fully describe an emotion
+      like happiness. A word is a label – but I argue people sometimes tend to
+      think more about the word than the experience when they think about it and
+      try to answer the question of what it is. When this happens, we find
+      ourselves trapped in self-references, and thinking stalls. The same is
+      even truer for Life.
+    </p>
+    <p>
+      What is Life, is a question that has persisted even with centuries of
+      definitions. If asked, most people list biological checklists and lexical
+      definitions, but I have yet to find someone who is satisfied with the
+      answer they themselves give. The problem of course is similar to what we
+      discussed about happiness above. Something as magnificent and beautifully
+      complex as Life, I feel like it would be degrading to give it a
+      definition.
+    </p>
+    <p>
+      Hence, I decided to stop trying to answer What is Life. I thought it would
+      be more productive to think, Why am I Living. Again, what is the purpose
+      of life is a question that has stood since the dawn of mankind; However, I
+      believe the reason for this is much simpler. Every generation lives in a
+      world that none of the previous generation lived in. Everything changes.
+      People change, thinking change even the landscape changes. Inevitably even
+      the gist of what the purpose of life is will change over the generations.
+    </p>
+    <p>
+      A clear distinction between what makes humans different from other animals
+      is a starting point for our discussion. I felt it would be better if I
+      approach the purpose of life starting from this distinction.
+    </p>
+    <script>
+      const toggle = document.getElementById("theme-toggle");
+
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+
+      toggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        localStorage.setItem(
+          "theme",
+          document.body.classList.contains("dark-mode") ? "dark" : "light"
+        );
+      });
+    </script>
+  </body>
+</html>

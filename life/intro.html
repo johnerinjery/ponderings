@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>On Life</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <button id="theme-toggle">Dark mode</button>
+    <h1 style="text-align: center">On Life</h1>
+    <p>
+      Hello, Reader. In this page I want to share my <em>Ponderings</em> on
+      Life. Imporant it is to note that I revise these texts if I learn
+      something that changes my prespective drastically. One has to be ready for
+      change at all times after all. However, everything you read here are my
+      thoughts which I have tried to be very critical about.
+    </p>
+    <hr />
+    <h2>Index</h2>
+    <ul>
+      <li>
+        <a href="/life/human.html">Human</a>
+      </li>
+    </ul>
+    <script>
+      const toggle = document.getElementById("theme-toggle");
+
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+
+      toggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        localStorage.setItem(
+          "theme",
+          document.body.classList.contains("dark-mode") ? "dark" : "light"
+        );
+      });
+    </script>
+  </body>
+</html>

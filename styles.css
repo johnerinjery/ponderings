@@ -1,0 +1,19 @@
+body {
+  background-color: white;
+  color: #111;
+  font-size: large;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: aliceblue;
+}
+
+#theme-toggle {
+  padding: 0.5em 1em;
+  cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
